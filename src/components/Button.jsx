@@ -10,6 +10,7 @@ class Button extends React.Component{
             <div>
                 <button className='btn' 
                 name={this.props.name} 
+                type={this.props.type || "submit"}
                 disabled={this.props.disabled}
                 onClick={()=>{
                 console.log("Clicked");

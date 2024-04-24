@@ -7,3 +7,13 @@
     margin: 0 auto;
     font-family: "Roboto",sans-serif;
 }
+.form-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    column-gap: 5px;
+    align-items: center;
+    /* background-color: RED; */
+}
+.form-wrapper > input{
+    margin-bottom: 0;
+}
