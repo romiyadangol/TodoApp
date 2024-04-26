@@ -10,8 +10,9 @@ class Input extends React.Component{
                 placeholder={this.props.placeholder || "Enter something"}
                 name={this.props.name}
                 disabled={this.props.disabled}
-                required={this.props.required}
-                value={this.props.value}>
+                // required={this.props.required}
+                value={this.props.value}
+                onChange={this.props.action}>
                 </input>
             </div>
         );

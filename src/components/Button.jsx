@@ -12,10 +12,8 @@ class Button extends React.Component{
                 name={this.props.name} 
                 type={this.props.type || "submit"}
                 disabled={this.props.disabled}
-                onClick={()=>{
-                console.log("Clicked");
-                }}>
-                {this.props.title || "button"}</button>
+                onClick={this.props.click}>
+                {this.props.label}</button>
             </div>
         );
     }

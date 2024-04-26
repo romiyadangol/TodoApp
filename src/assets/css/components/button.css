@@ -6,12 +6,12 @@
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    background-color: #7357ff;
+    background-color: #9CAFAA;
     color: white;
-    margin-bottom: 10PX;
+    margin-bottom: 10px;
 }
 .btn:hover{
-    background-color: #7660e0;
+    /* background-color:#D6DAC8; */
 }
 .btn:disabled{
     background-color: grey;
