@@ -11,8 +11,9 @@ class Card extends React.Component{
     render(){
         return(
             <div className='card'>
-                <input type="checkbox"/>
-                <span>{this.props.list}</span>
+                <input type="checkbox"
+                onChange={this.props.toggleCheckbox}/>
+                <span className={this.props.className}>{this.props.title}</span>
                 {/* <p>{this.props.description}</p> */}
                 <Button label="Edit"/>
                 <Button  label="Delete" click={this.props.delclick}/>

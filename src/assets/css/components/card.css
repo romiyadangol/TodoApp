@@ -14,3 +14,7 @@
 .card > button{
     margin-top: 0 ;
 }
+.strike{
+    text-decoration: line-through;
+    color: gray;
+}
