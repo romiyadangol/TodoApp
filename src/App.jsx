@@ -18,8 +18,8 @@ class App extends React.Component{
         {name: 'Task 2', isComplete: false},
         {name: 'Task 3', isComplete: false},
         {name: 'Task 4', isComplete: false},
-        {name: 'Task 5', isComplete: false},      ],
-
+        {name: 'Task 5', isComplete: false},
+      ],
     }
 }
 toggleCheckbox = (index) => {
@@ -46,12 +46,28 @@ action = (e) =>{
 }
 //add button click
 click = () =>{
+  this.newItem = {
+      name : this.state.input,
+      isComplete: false,
+  }
   this.setState({
-    list : [...this.state.list,this.state.input],//spread operator
-    input : '',
-  });
-  this.notify();
+      list : [...this.state.list,this.newItem],
+      input:'',
+  })
 }
+//edit button click
+handleEdit = (index) => {
+    this.setState({
+        list : this.state.list.map((element,idx) => {
+            if(index === idx){
+                element.name = prompt('Enter new task',element.name);
+            }
+            return element;
+        })
+    });
+}
+
+
 //delete button click
 delclick = (index) =>{
   console.log('delete clicked');
@@ -98,8 +114,9 @@ delclick = (index) =>{
           key={index} 
           className={element.isComplete ? 'strike' : ""}
           toggleCheckbox = {() => {
-            this.toggleCheckbox(index)
+            this.toggleCheckbox(index);
           }}
+          handleEdit={()=>{this.handleEdit(index)}}
           delclick={() => {this.delclick(index)}}/>
         })}
         </section>
